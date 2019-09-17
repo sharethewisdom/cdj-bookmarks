@@ -129,4 +129,4 @@ with io.open(file, 'w', encoding='utf8') as f:
     f.write(output)
 
 subprocess.call(["git", "add", file])
-subprocess.call(["git", "commit", "-m", u"added\ %s\ bookmarks" % number])
+subprocess.call(["git", "commit", "-m", u"updated %s bookmarks" % number])
