@@ -1,0 +1,9 @@
+*
+!.gitignore
+!favicon.ico
+!generate.py
+!index.html
+!jquery-1.9.1.min.js
+!LICENSE
+!main.css
+!README.md

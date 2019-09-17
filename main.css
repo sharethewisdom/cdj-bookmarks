@@ -1,0 +1,204 @@
+:focus{outline: none!important}
+a, a:link, a:active {
+  color: #048;
+  text-decoration: none;
+}
+html,body,#wrap{
+  height: 100%;
+}
+body{
+  margin:0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+p,ul,h1{
+  margin: .4em 0 .4em 0;
+}
+#help{
+  margin-top: 4em;
+}
+.bookmark>a{
+  font-size: 120%;
+}
+.abstract,
+.help,
+.bookmark .tagfilter{
+  font-size: 90%;
+}
+#untagged,
+.creators,
+.type,
+.rights,
+.help,
+.stitle{
+  font-size: 80%;
+}
+.creators,
+.type,
+.rights{
+  margin-right: .5em;
+  float: right;
+  display: inline-block;
+  color: #444;
+}
+.bookmark .tags{
+  margin-left: -0.4em;
+}
+.bookmark .tagfilter,
+#filter > input,
+#tags,header{
+  padding: .1em .4em;
+}
+ul{
+  list-style-type: none;
+  padding: 0 0 0 1.4em;
+}
+main .bookmark:hover{
+  filter: brightness(110%) drop-shadow(8px 8px 10px gray);
+}
+header{
+  background-color: #000;
+  color: #eee;
+  font-weight: 540;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+              0 2px 9px 1px rgba(0, 0, 0, 0.12),
+              0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+h1{
+  font-size: 100%;
+}
+header #title{
+  float: right;
+}
+header .handheld{
+  display:inline-block;
+}
+#filter > input{
+  width: 100%;
+  box-sizing: border-box;
+  border: 4px solid #acf;
+}
+#autotags {
+  /* text-justify: inter-character; */
+}
+aside {
+  text-align: justify;
+}
+#autotags .tagfilter{
+  font-family: monospace;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#autotags .tagfilter.selected{
+  color: #a20;
+  background-color: #fff;
+}
+#untagged, #untagged:link, #untagged:active,
+.tagfilter, .tagfilter:link, .tagfilter:active {
+  color: #036;
+}
+.bookmark .abstract{
+  text-overflow: ellipsis;
+}
+main::after{
+  content: '\00a0';
+  display: block;
+  height: 0px;
+  visibility: hidden;
+}
+
+@supports (display: grid) {
+  #wrap,main{
+    display:grid;
+    grid-template-columns: 1fr;
+    align-content: start;
+    grid-gap: 0;
+  }
+  #wrap {
+    grid-template-areas: "a" "b" "c" "d";
+    grid-template-rows: repeat(4, minmax(min-content, auto));
+  }
+  header{
+    display:block;
+    grid-area: a;
+  }
+  #filter{
+    grid-area: b;
+  }
+  #tags{
+    grid-area: c;
+  }
+  main{
+    grid-area: d;
+  }
+}
+
+@media only screen and (min-device-width: 480px){
+  main>ul{
+    display: contents;
+    padding: 0;
+    margin:  0;
+  }
+  main>ul>li{
+    border: 1em solid transparent;
+    background-clip: border-box;
+  }
+ .tagfilter:hover,
+  #untagged:hover{
+    background-color: #fff;
+    color: #000;
+  }
+  #untagged,
+  header .desktop{
+    display:inline-block;
+  }
+  header .handheld{
+    display:none;
+  }
+}
+@media only screen and (min-device-width: 768px) and (min-width: 768px){
+  #tags,header{
+    padding: .5em .3em;
+  }
+  .btn{
+    display:none;
+  }
+  @supports (display: grid) {
+    #wrap{
+      grid-gap: 0;
+    }
+    main{
+      grid-gap: .3em .3em;
+    }
+    #wrap{
+      grid-template-areas: "b a" "c d";
+      grid-template-columns: 2fr 5fr;
+      grid-template-rows: min-content minmax(min-content, auto);
+    }
+    #filter>input{
+      height:100%;
+    }
+    #filter{
+      align-items: stretch;
+    }
+    #tags{
+      align-self:start;
+    }
+    main{
+      grid: auto-flow / 1fr;
+    }
+  }
+}
+@media only screen and (min-device-width: 820px) and (min-width: 820px){
+  .ltext{
+    display:inline-block;
+  }
+  @supports (display: grid) {
+    main{
+      grid: auto-flow / 1fr 1fr;
+    }
+  }
+}
