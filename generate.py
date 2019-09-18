@@ -4,11 +4,13 @@
 __version__ = "0.0.1"
 import io
 import re
+import subprocess
 from pyzotero import zotero, zotero_errors
 with open('.apikey') as f:
     apikey = f.readline().strip()
 
 zot = zotero.Zotero(2370588, 'group', apikey)
+number = 0
 
 def append_bookmarks(items, color=u"hsl(110,50%,90%)"):
     if items:
@@ -18,6 +20,9 @@ def append_bookmarks(items, color=u"hsl(110,50%,90%)"):
             data = item['data']
             if data['itemType'] == 'note':
                 return
+            else:
+                global number
+                number+=1
 
             bookmarks += u"\n<li class=\"bookmark\" style=\"background-color: %s;\" title=\"%s\">\n" % (color, ", ".join(tags))
             bookmarks += u"  <a target=\"_blank\" href=\"%s\">\n    %s\n</a>" % (data['url'], data['title'])
@@ -94,7 +99,6 @@ def generate_html():
         <ul id="bookmarks">
     """
 
-    items = zot.top(limit=2)
     collections = zot.collections_top()
     hue = 0
 
@@ -103,7 +107,7 @@ def generate_html():
             print('adding ' + col['data']['name'])
             items = zot.collection_items(col['data']['key'])
             color = u"hsl(%s,40%%,90%%)" % hue
-            hue = max(hue+40, 255)
+            hue = max(hue+60, 255)
             html += append_bookmarks(items,color)
 
     else:
@@ -123,3 +127,6 @@ output = generate_html()
 file='index.html'
 with io.open(file, 'w', encoding='utf8') as f:
     f.write(output)
+
+subprocess.call(["git", "add", file])
+subprocess.call(["git", "commit", "-m", u"updated %s bookmarks" % number])
