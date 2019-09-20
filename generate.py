@@ -12,7 +12,7 @@ with open('.apikey') as f:
 zot = zotero.Zotero(2370588, 'group', apikey)
 number = 0
 
-def append_bookmarks(items, color=u"hsl(110,50%,90%)"):
+def append_bookmarks(items, color=u"hsl(110,50%,var(--li-lightness))"):
     if items:
         bookmarks = u''
         for item in items:
@@ -27,15 +27,15 @@ def append_bookmarks(items, color=u"hsl(110,50%,90%)"):
             bookmarks += u"\n<li class=\"bookmark\" style=\"background-color: %s;\" title=\"%s\">\n" % (color, ", ".join(tags))
             bookmarks += u"  <a target=\"_blank\" href=\"%s\">\n    %s\n</a>" % (data['url'], data['title'])
             type = re.sub("([a-z])([A-Z])","\g<1> \g<2>", data['itemType']).lower()
-            bookmarks += u"  <span class=\"type\">%s</span>\n" % type
+            bookmarks += u"  <span class=\"right type\">%s</span>\n" % type
 
             if data['rights']:
-                bookmarks += u"  <span class=\"rights\">(%s)</span>\n" % data['rights']
+                bookmarks += u"  <span class=\"right rights\">(%s)</span>\n" % data['rights']
 
             if data['creators']:
                 bookmarks += u"  <ul>"
                 for c in data['creators']:
-                    bookmarks += u"    <li class=\"creators\" title\"%s\">%s, %s</li>" % (c['creatorType'], c['lastName'], c['firstName'])
+                    bookmarks += u"    <li class=\"right creators\" title\"%s\">%s, %s</li>" % (c['creatorType'], c['lastName'], c['firstName'])
 
                 bookmarks += u"  </ul>"
 
@@ -64,27 +64,30 @@ def generate_html():
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="bookmarks.js"></script>
     <title>CoderDojo Belgium bookmarks</title>
-    </head><body>
+    </head><body class="light">
     <div id="wrap">
-      <header><h1 id=\"title\">CoderDojo Belgium bookmarks</h1>
-    """
-
-    html += u"<span>(%s)</span>\n" % zot.num_items()
-    # TODO: .groups() returns empty, why?
-    #       add description to aside
-    #desc = zot.groups()[0]['data']['description']
-
-    html += u"""
-      <span id=\"num_items\">&nbsp</span>
+      <header>
+        <label class="switch">
+          <input id=colorscheme type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <h1 id="title">
+          <a href="/nl" title="CoderDojoBelgium"
+             class="logo">CoderDojoBelgium</a>
+             <span class="right">bookmarks</span>
+        </h1>
       </header>
       <form id="filter" name="filter" action="#">
         <input type="text"
                 name="fill"
                 id="fill"
                 value=""
-                placeholder="filter" />
+                placeholder="🔍" />
       </form>
       <aside id="tags">
+    """
+    html += u"  <span class=\"right\" id=\"num_items\">showing %s links</span>\n" % zot.num_items()
+    html += u"""
         <a href="#untagged" id="untagged">untagged</a>
         <p id="autotags"></p>
         <div id="help">
@@ -106,7 +109,7 @@ def generate_html():
         for col in collections:
             print('adding ' + col['data']['name'])
             items = zot.collection_items(col['data']['key'])
-            color = u"hsl(%s,40%%,90%%)" % hue
+            color = u"hsl(%s,40%%,var(--li-lightness))" % hue
             hue = max(hue+60, 255)
             html += append_bookmarks(items,color)
 

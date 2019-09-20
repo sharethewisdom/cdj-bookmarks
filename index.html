@@ -1,4 +1,3 @@
-
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
     "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml"><head>
@@ -11,21 +10,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="bookmarks.js"></script>
     <title>CoderDojo Belgium bookmarks</title>
-    </head><body>
+    </head><body class="light">
     <div id="wrap">
-      <header><h1 id="title">CoderDojo Belgium bookmarks</h1>
-    <span>(54)</span>
-
-      <span id="num_items">&nbsp</span>
+      <header>
+        <label class="switch">
+          <input id=colorscheme type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <h1 id="title">
+          <a href="/nl" title="CoderDojoBelgium"
+             class="logo">CoderDojoBelgium</a>
+             <span class="right">bookmarks</span>
+        </h1>
       </header>
       <form id="filter" name="filter" action="#">
         <input type="text"
                 name="fill"
                 id="fill"
                 value=""
-                placeholder="filter" />
+                placeholder="🔍" />
       </form>
       <aside id="tags">
+      <span class="right" id="num_items">showing 67 links</span>
+
         <a href="#untagged" id="untagged">untagged</a>
         <p id="autotags"></p>
         <div id="help">
@@ -39,378 +46,12 @@
       <main>
         <ul id="bookmarks">
     
-<li class="bookmark" style="background-color: hsl(0,40%,90%);" title="reference, hosting, version control, collaborating">
-  <a target="_blank" href="https://docs.gitlab.com/ee/user/project/pages/">
-    📚 GitLab Pages
-</a>  <span class="type">webpage</span>
+<li class="bookmark" style="background-color: hsl(0,40%,var(--li-lightness));" title="linnux, community">
+  <a target="_blank" href="https://destinationlinux.org/">
+    Destination Linux
+</a>  <span class="right type">webpage</span>
+  <ul>    <li class="right creators" title"author">Tunnell, Michael</li>  </ul>  <p class="stitle">A conversational podcast by people who love running Linux.</p>
 </li>
-
-<li class="bookmark" style="background-color: hsl(0,40%,90%);" title="reference, course, webdev">
-  <a target="_blank" href="https://www.w3schools.com/">
-    📚 W3Schools
-</a>  <span class="type">webpage</span>
-</li>
-
-<li class="bookmark" style="background-color: hsl(0,40%,90%);" title="reference, online, webdev, library">
-  <a target="_blank" href="https://api.jquery.com/">
-    📚 jQuery API
-</a>  <span class="type">webpage</span>
-  <p class="abstract">jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(0,40%,90%);" title="javascript, reference, online, library">
-  <a target="_blank" href="https://p5js.org/reference/">
-    📚 p5.js
-</a>  <span class="type">webpage</span>
-</li>
-
-<li class="bookmark" style="background-color: hsl(0,40%,90%);" title="reference, online, webdev">
-  <a target="_blank" href="https://developer.mozilla.org/en-US/">
-    📚 MDN Web Docs
-</a>  <span class="type">webpage</span>
-  <p class="abstract">The MDN Web Docs site provides information about Open Web technologies including HTML, CSS, and APIs for both Web sites and progressive web apps. It also has some developer-oriented documentation for Mozilla products, such as Firefox Developer Tools.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(255,40%,90%);" title="modding, minecraft, games">
-  <a target="_blank" href="https://www.curseforge.com/minecraft/modpacks/coderdojo-belgium-division-eeklo">
-    ⚔️ Modpack Eeklo
-</a>  <span class="type">webpage</span>
-  <p class="stitle">CoderDojo Belgium - Division</p>
-  <p class="abstract">Modpack for dojocon's at CoderDojoBelgium Eeklo</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(255,40%,90%);" title="reference, online, games">
-  <a target="_blank" href="https://minecraft.gamepedia.com/Minecraft_Wiki">
-    ⚔️ Minecraft Wiki
-</a>  <span class="type">webpage</span>
-  <p class="abstract">gameplay, blocks, crafting, redstone, updates, events, resource packs, mods, and tutorials.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(255,40%,90%);" title="editor, community, games, tool">
-  <a target="_blank" href="https://scratch.mit.edu/">
-    🏃 Scratch
-</a>  <span class="type">computer program</span>
-  <p class="stitle">Scratch - Imagine, Program, Share</p>
-  <p class="abstract">Scratch is a free programming language and online community where you can create your own interactive stories, games, and animations.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(255,40%,90%);" title="games, library">
-  <a target="_blank" href="https://liballeg.org/">
-    🎮 Allegro
-</a>  <span class="type">computer program</span>
-  <span class="rights">(BSD-3-Clause)</span>
-  <ul>    <li class="creators" title"programmer">Hsieh, Paul</li>  </ul>  <p class="stitle">Allegro - A game programming library</p>
-  <p class="abstract">Handles common, low-level tasks such as creating windows, accepting user input, loading data, drawing images, playing sounds, etc. and generally abstracting away the underlying platform.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(255,40%,90%);" title="graphics, games, tool">
-  <a target="_blank" href="https://www.aseprite.org/">
-    🎞️ Aseprite
-</a>  <span class="type">computer program</span>
-  <span class="rights">(uela)</span>
-  <ul>    <li class="creators" title"programmer">Capello, David</li>  </ul>  <p class="stitle">Animated sprite editor & pixel art tool</p>
-  <p class="abstract">Animated sprite editor & pixel art tool
-<a href="https://github.com/aseprite/aseprite/">source</a></p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(255,40%,90%);" title="games, tool">
-  <a target="_blank" href="https://love2d.org/">
-    ❤️ LÖVE
-</a>  <span class="type">computer program</span>
-  <span class="rights">(zlib)</span>
-  <ul>    <li class="creators" title"programmer">Ruud, Anders</li>  </ul>  <p class="abstract">Framework you can use to make 2D games in Lua.
-<a href="https://bitbucket.org/rude/love/src/default/">source</a></p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(255,40%,90%);" title="modding, scripting, disassembly, games, tool">
-  <a target="_blank" href="https://www.cheatengine.org/">
-    🔍 Cheat Engine
-</a>  <span class="type">computer program</span>
-  <p class="stitle">Cheat Engine - A development environment focused on modding</p>
-  <p class="abstract">Memory scanner (change variables within a game), debugger, disassembler, assembler, speedhack, trainer maker, direct 3D manipulation tools, system inspection tools and extensive scripting support.
-
-<a href="https://github.com/cheat-engine/cheat-engine">source</a></p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(315,40%,90%);" title="">
-  <a target="_blank" href="https://github.com/tuvtran/project-based-learning">
-    🗒️ list of tutorials
-</a>  <span class="type">document</span>
-  <span class="rights">(MIT)</span>
-  <ul>    <li class="creators" title"author">Tran, Tu V.</li>  </ul>  <p class="stitle">Curated list of project-based tutorials.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(315,40%,90%);" title="editor, online, collaborating, tool">
-  <a target="_blank" href="https://www.overleaf.com">
-    🖊 Overleaf
-</a>  <span class="type">webpage</span>
-  <p class="abstract">An online LaTeX editor that's easy to use. No installation, real-time collaboration, version control, hundreds of LaTeX templates, and more.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(315,40%,90%);" title="editor, community, online, webdev, tool">
-  <a target="_blank" href="https://codepen.io/">
-    🖊 CodePen
-</a>  <span class="type">webpage</span>
-  <p class="abstract">An online code editor, learning environment, and community for front-end web development.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(315,40%,90%);" title="editor, online, webdev, tool">
-  <a target="_blank" href="https://stackblitz.com/">
-    🖊 StackBlitz
-</a>  <span class="type">webpage</span>
-  <p class="stitle">The online code editor for web apps.</p>
-  <p class="abstract">Powered by Visual Studio Code.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(315,40%,90%);" title="editor, online, webdev, tool">
-  <a target="_blank" href="https://codesandbox.io/">
-    🖊 CodeSandbox
-</a>  <span class="type">webpage</span>
-  <p class="stitle">Create and share web application projects</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(315,40%,90%);" title="editor, online, generator, webdev">
-  <a target="_blank" href="https://truben.no/latex/table/">
-    🖊 Table Editor
-</a>  <span class="type">webpage</span>
-  <p class="stitle">Easy to use online editor for tables.</p>
-  <p class="abstract">Outputs tables as Latex, HTML, Markdown, JSON, SQL, Balsamiq, plain text and more. Makes it easier to work with tables.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(315,40%,90%);" title="javascript, editor, online, library">
-  <a target="_blank" href="https://editor.p5js.org/">
-    🖊 p5.js
-</a>  <span class="type">webpage</span>
-</li>
-
-<li class="bookmark" style="background-color: hsl(315,40%,90%);" title="javascript, editor, online, webdev">
-  <a target="_blank" href="https://jsfiddle.net">
-    🖊 JSFiddle
-</a>  <span class="type">webpage</span>
-</li>
-
-<li class="bookmark" style="background-color: hsl(315,40%,90%);" title="editor, online, generator">
-  <a target="_blank" href="http://dreampuf.github.io/GraphvizOnline">
-    🖊 Graphviz
-</a>  <span class="type">webpage</span>
-  <p class="stitle">Let's Graphviz it Online</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(375,40%,90%);" title="graphics, tool">
-  <a target="_blank" href="https://www.gimp.org/">
-    🎨 GIMP
-</a>  <span class="type">computer program</span>
-  <ul>    <li class="creators" title"programmer">Natterer, Michael</li>  </ul>  <p class="stitle">GIMP - GNU Image Manipulation Program</p>
-  <p class="abstract">Image manipulation with multi-language scripting support such as C, C++, Perl, Python, Scheme, and more!
-
-https://gitlab.gnome.org/GNOME/gimp</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="">
-  <a target="_blank" href="http://cssdiner.com">
-    🍽️ CSS Diner
-</a>  <span class="type">webpage</span>
-  <p class="abstract">A fun game to help you learn and practice CSS selectors.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="">
-  <a target="_blank" href="https://github.com/ekalinin/typogr.js">
-    ➰ typogr.js
-</a>  <span class="type">computer program</span>
-  <span class="rights">(MIT)</span>
-  <ul>    <li class="creators" title"programmer">Kalinin, Eugene</li>  </ul>  <p class="abstract">Typography utils for javascript.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="">
-  <a target="_blank" href="https://github.com/freeCodeCamp/meeting-for-good">
-    📱meeting-for-good
-</a>  <span class="type">computer program</span>
-  <span class="rights">(BSD-3-Clause)</span>
-  <p class="abstract">A meeting coordination app for your team.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="">
-  <a target="_blank" href="https://github.com/filamentgroup/loadCSS">
-    ⬇️loadCSS
-</a>  <span class="type">computer program</span>
-  <span class="rights">(MIT)</span>
-  <p class="abstract">A function for loading CSS asynchronously.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="javascript, library">
-  <a target="_blank" href="https://github.com/IceCreamYou/Canvas-Sprite-Animations">
-    🏃 sprite animations
-</a>  <span class="type">computer program</span>
-  <ul>    <li class="creators" title"programmer">Sukin, Isaac</li>  </ul>  <p class="stitle">A powerful, easy-to-use Sprite animation library designed for HTML5 Canvas.</p>
-  <p class="abstract">A powerful, easy-to-use Sprite animation library designed for HTML5 Canvas.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="javascript, library">
-  <a target="_blank" href="https://github.com/jwagner/smartcrop.js">
-    🖼️ smartcrop.js
-</a>  <span class="type">computer program</span>
-  <span class="rights">(MIT)</span>
-  <ul>    <li class="creators" title"programmer">Wagner, Jonas</li>    <li class="creators" title"programmer">Muehlhaeuser, Christian</li>  </ul>  <p class="abstract">Content aware image cropping.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="community">
-  <a target="_blank" href="https://stackoverflow.com/">
-    📚 Stack Overflow
-</a>  <span class="type">webpage</span>
-  <p class="abstract">Stack Overflow is the largest, most trusted online community for developers to learn, share​ ​their programming ​knowledge, and build their careers.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="generator, webdev, tool">
-  <a target="_blank" href="https://github.com/gohugoio/hugo">
-    Hugo
-</a>  <span class="type">computer program</span>
-  <span class="rights">(Apache-2.0)</span>
-  <p class="stitle">The world’s fastest framework for building websites.</p>
-  <p class="abstract">Supports unlimited content types, taxonomies, menus, dynamic API-driven content, ...
-<a href="https://gohugo.io">homepage</a></p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="online, course, webdev">
-  <a target="_blank" href="https://www.freecodecamp.org">
-    🏕️ freeCodeCamp
-</a>  <span class="type">webpage</span>
-  <p class="abstract">Learn to code with free online courses, programming projects, and interview preparation for developer jobs.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="">
-  <a target="_blank" href="https://github.com/algolia/docsearch">
-    🔍 docsearch
-</a>  <span class="type">computer program</span>
-  <span class="rights">(MIT)</span>
-  <p class="abstract">The easiest way to add search to your documentation.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="demo, webdev">
-  <a target="_blank" href="https://github.com/jakearchibald/offline-wikipedia">
-    offline-wikipedia
-</a>  <span class="type">computer program</span>
-  <span class="rights">(MIT)</span>
-  <ul>    <li class="creators" title"programmer">Archibald, Jake</li>  </ul>  <p class="stitle">Demo of how something like Wikipedia could be offline-first</p>
-  <p class="abstract"><a href="https://wiki-offline.jakearchibald.com/">demopage</a></p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="">
-  <a target="_blank" href="https://github.com/vaadin/vaadin">
-    🦌 Vaadin
-</a>  <span class="type">computer program</span>
-  <span class="rights">(Apache-2.0)</span>
-  <ul>    <li class="creators" title"programmer">Lehtinen, Jonas</li>  </ul>  <p class="stitle">An evolving set of open source web components for building mobile and desktop web applications in modern browsers.</p>
-  <p class="abstract"><a href="https://vaadin.com">homepage</a></p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="reference">
-  <a target="_blank" href="https://github.com/DrkSephy/es6-cheatsheet">
-    ES6
-</a>  <span class="type">computer program</span>
-  <ul>    <li class="creators" title"programmer">Leonard, David</li>  </ul>  <p class="stitle">ES2015 [ES6] cheatsheet containing tips, tricks, best practices and code snippets</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="">
-  <a target="_blank" href="https://haveibeenpwned.com/">
-    📧 Have I Been Pwned
-</a>  <span class="type">webpage</span>
-  <p class="stitle">Check if your email has been compromised in a data breach</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="javascript, library">
-  <a target="_blank" href="https://github.com/GoogleChrome/workbox">
-    📦 Workbox
-</a>  <span class="type">computer program</span>
-  <span class="rights">(MIT)</span>
-  <p class="abstract">JavaScript libraries for Progressive Web Apps</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="">
-  <a target="_blank" href="https://github.com/heiseonline/shariff">
-    👮 Shariff
-</a>  <span class="type">computer program</span>
-  <span class="rights">(MIT)</span>
-  <p class="stitle">👮 Shariff enables website users to share their favorite content without compromising their privacy.</p>
-  <p class="abstract">enables website users to share their favorite content without compromising their privacy.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="generator, tool">
-  <a target="_blank" href="https://www.srihash.org/">
-    SRI Hash Generator
-</a>  <span class="type">webpage</span>
-</li>
-
-<li class="bookmark" style="background-color: hsl(435,40%,90%);" title="blog, webdev">
-  <a target="_blank" href="https://csswizardry.com/archive/">
-    CSS Wizardry
-</a>  <span class="type">webpage</span>
-  <ul>    <li class="creators" title"author">Roberts, Harry</li>  </ul></li>
-
-<li class="bookmark" style="background-color: hsl(495,40%,90%);" title="raspberry pi">
-  <a target="_blank" href="https://github.com/pipe/webcam">
-    📷 webcam
-</a>  <span class="type">computer program</span>
-  <span class="rights">(View license)</span>
-  <p class="stitle">A simple, secure, private webcam for a Raspberry Pi</p>
-  <p class="abstract">A simple, secure, private webcam for a Raspberry Pi</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(495,40%,90%);" title="shop">
-  <a target="_blank" href="http://www.gotron.be/">
-    🤖 Gotron
-</a>  <span class="type">webpage</span>
-  <p class="abstract">Electronics webshop and 3 stores in Belgium with more than 25.000 stock parts.</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(495,40%,90%);" title="shop, electronics">
-  <a target="_blank" href="https://www.martoparts.nl/Home">
-    🤖 Martoparts
-</a>  <span class="type">webpage</span>
-  <p class="abstract">Electronics webshop
-
-KVK 61390313
-Vestigingsnr. 000030497787
-Dorpsstraat 37
-4569AG
-Graauw</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(495,40%,90%);" title="shop, electronics">
-  <a target="_blank" href="https://www.ratoeducation.be/en/">
-    🤖 RATO
-</a>  <span class="type">webpage</span>
-  <p class="abstract">RATO Education bvba
-Blancefloerlaan 167
-B 2050 Antwerpen
-info@rato.be
-+32 (0)3 250 66 70</p>
-</li>
-
-<li class="bookmark" style="background-color: hsl(495,40%,90%);" title="shop, electronics">
-  <a target="_blank" href="https://www.velleman.eu/">
-    🤖 Velleman
-</a>  <span class="type">webpage</span>
-</li>
-
-<li class="bookmark" style="background-color: hsl(495,40%,90%);" title="shop, electronics">
-  <a target="_blank" href="https://www.vaeltest.be/">
-    🤖 Alfa Parts
-</a>  <span class="type">webpage</span>
-</li>
-
-<li class="bookmark" style="background-color: hsl(495,40%,90%);" title="shop, electronics">
-  <a target="_blank" href="https://www.antratek.be/">
-    🤖 Antratek
-</a>  <span class="type">webpage</span>
-</li>
-
-<li class="bookmark" style="background-color: hsl(495,40%,90%);" title="shop, electronics">
-  <a target="_blank" href="httpw://www.cotubex.be">
-    🤖 Cotubex
-</a>  <span class="type">webpage</span>
-  <p class="abstract">Cotubex</p>
-</li>
-
       </ul>
     </main>
     </div>
